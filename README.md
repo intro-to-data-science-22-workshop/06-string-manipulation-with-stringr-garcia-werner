@@ -13,13 +13,13 @@ It t is part of the [I2DS Tools for Data Science workshop](https://github.com/in
 
 This session is divided into two parts: the presentation, and the tutorial.
 
-# Presentation (PPT format)
+#### Presentation (PPT format)
 
 The presentation introduces the participant to string, its uses, and its prevalence in R workflow. Then, it introduces the "stringr" package, describing its functionalities across various categories.
 
 The presentation concludes with a brief overview of regular expressions, and its role in "stringr" commands. 
 
-# Tutorial (RMD format)
+#### Tutorial (RMD format)
 
 The tutorial provides an opportunity for the participant to familiarize themselves with basic "stringr" functions, as well as regular expressions to supplement their use of "stringr" functionalities.
 
