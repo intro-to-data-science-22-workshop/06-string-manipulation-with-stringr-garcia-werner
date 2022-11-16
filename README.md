@@ -21,7 +21,7 @@ The goals of this session are to (1) equip you with conceptual knowledge about t
 ## Instructors
 
 - Adrian Werner ([linkedin](https://www.linkedin.com/in/adrian-wernerde/))
-- Richard Garcia-Guerrero ([linkein](https://www.linkedin.com/in/richardagarcia/)
+- Richard Garcia-Guerrero ([linkedin](https://www.linkedin.com/in/richardagarcia/))
 
 
 ## Further resources
