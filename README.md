@@ -28,7 +28,7 @@ The goals of this session are to (1) equip you with conceptual knowledge about t
 
 - [stringr overview at stringr.tidyverse.org](https://stringr.tidyverse.org/)
 - [Hands-on dplyr tutorial by Data School on YouTube](https://www.youtube.com/watch?v=jWjqLW-u3hc)
-- [R for Data Science book - part on data wrangling](https://r4ds.had.co.nz/wrangle-intro.html)
+- [R for Data Science book - stringr](https://r4ds.had.co.nz/strings.html)
 
 
 ## License
