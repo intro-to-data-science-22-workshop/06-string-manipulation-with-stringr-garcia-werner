@@ -21,7 +21,7 @@ The goals of this session are to (1) equip you with conceptual knowledge about t
 ## Instructors
 
 - Adrian Werner ([linkedin](https://www.linkedin.com/in/adrian-wernerde/))
-- Kermit the Frog ([linkedin](https://en.wikipedia.org/wiki/Kermit_the_Frog)](https://www.linkedin.com/in/richardagarcia/)
+- Richard Garcia-Guerrero ([linkein](https://www.linkedin.com/in/richardagarcia/)
 
 
 ## Further resources
