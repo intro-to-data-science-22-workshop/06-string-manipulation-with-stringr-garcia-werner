@@ -56,4 +56,4 @@ The material in this repository is made available under the [MIT license](http:/
 
 **Adrian Werner** prepared the practice material. He also reviewed and corrected the presentation slides.
 
-**Richard Garcia-Guerrero** prepared the presentation slides. He also reviewed and corrected the practice material.
+**Richard Garcia-Guerrero** prepared the presentation slides and recording. He also reviewed and corrected the practice material.
