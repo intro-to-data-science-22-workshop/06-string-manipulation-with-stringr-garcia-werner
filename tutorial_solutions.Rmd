@@ -1,0 +1,239 @@
+---
+title: "Tutorial Stringr"
+author: "Werner, Adrian"
+date: "2022-11-14"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+## Packages
+
+We will explore the "stringr" package of the tidyverse.  In this tutorial we will examine the following things:
+
+1) Basics
+2) Text Manipulation
+3) Regular Expressions
+4) Repetition
+5) Grouped Matches
+
+```{r}
+library(stringr)
+library(tibble)
+library(dplyr)
+```
+
+## Part 1: Stringr basics
+
+## How to create a string
+Strings are created using either single or double quotes. You can use either. 
+
+```{r}
+string1 <- "This is a string"
+string2 <- 'This is a string too'
+```
+
+## Task 1: Correct the following code. What is wrong?
+
+```{r}
+string3 <- 'Yesterday I arrived to "BER" airport in Berlin'
+string3b <- 'Yesterday I arrived to 'BER' airport in Berlin'
+
+#You have to be consistent however with your usage.
+
+string3 <- "Yesterday I arrived to 'BER' airport in Berlin"
+
+#If you want to include a quote, it needs to be done with double quotes outside and single inside or it messes up the code.
+```
+
+## Part 2: Manipulating text with stringr
+All functions from the stringr family begin with the str_
+
+One of the most used functions in base R is the `paste()` function, which can be used to merge multiple text elements into one. For strings it is useful to use `str_c()`(see later).
+
+```{r}
+text1 <- "lorem ipsum is simply dummy text of the printing and typesetting industry"
+text2 <- "lorem ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+text3 <- "it has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged"
+
+full_text <- paste(text1, text2, text3)
+full_text
+```
+
+We can subset strings using the `str_sub()` function. Use numbers to designate which characters you’d like to extract.
+
+```{r str_sub() function}
+str_sub(full_text, 1, 11)
+```
+
+## Task 2: Can you think of a way to extract the last word of the string by using this method?
+
+```{r str_sub() function}
+str_sub(full_text, -9, -1)
+```
+
+We have functions `str_to_upper()` and `str_to_lower()` for changing the case of our strings. Let's see an example with `str_to_upper()`:
+
+```{r str_to_upper() function}
+str_to_upper(full_text)
+```
+
+## Now let's do some formatting
+In our text, there are no seperators (.) between the strings. Additionally, no capital letters at the start of a sentence. The text also does not end with a period.
+
+We can use stringr in order to specify how strings should be merged.
+```{r str_to_c() function}
+#Seperators & space:
+full_text <- str_c(text1, text2, text3,  sep = ". ")
+full_text
+```
+
+We will add a period at the very end of the string when we learn regular expressions later on.
+
+Now, we still have no capital letters. 
+
+## Does subsetting help?
+Yes, with subsetting one can select certain elements in a string that need to be altered.
+
+## Use str_sub and str_to_upper to alter object text1
+```{r Subsetting using str_to_upper() function}
+
+str_sub(text1, 1, 1) <- str_to_upper(str_sub(text1, 1, 1))
+``````
+
+## Part 3: Regular expressions (regex)
+Ideally, we combine stringr with regex! The real power of stringr lies in the ability of the package to deal with regular expressions. Regex is useful for more complex changes. 
+
+Some regex examples:
+
+* `\d`: matches any digit
+* `\s`: matches any whitespace
+* `[abc]`: matches a, or b, or c
+* `[^abc]`: matches anything except a, or b, or c
+* `[ab|c]`: matches ab together, or c
+
+Everything is in the cheatsheet: https://github.com/rstudio/cheatsheets/blob/main/strings.pdf
+
+```{r}
+
+#Change first letter to uppercase using regex
+str_view_all(full_text, "(^[[:alpha:]])")
+
+text2 <- gsub("(^[[:alpha:]])", "\\U\\1", text2, perl=TRUE)
+text3 <- gsub("(^[[:alpha:]])", "\\U\\1", text3, perl=TRUE)
+
+#\\U, in conjunction with perl=TRUE, says 'put what follows in upper case'
+#\\1 in the replacement string says 'insert the contents of the first #matched pattern'
+
+full_text <- str_c(text1, text2, text3,  sep = ". ")
+full_text
+
+#End text with dot:
+str_view_all(full_text, "$")
+full_text <- gsub("$", "\\.", full_text, perl=TRUE)
+full_text
+``````
+
+## Example of dataframe
+Vector with 980 random words (a-z).
+```{r}
+df <- tibble(
+  word = words)
+
+#Return number of words that start with "y"
+sum(str_count(df$word, "^y"))
+``````
+
+## Task 3: Generate a table which shows the number of vowels, consonants and words containing a_or_c using regex. Hint: Look at regex examples.
+
+```{r Use str_count() to get regular expression matches}
+
+df %>%
+  mutate(
+    vowels = str_count(word, "[aeiou]"),
+    consonants = str_count(word, "[^aeiou]"),
+    a_or_c = str_count(word, "[a|c]")
+  )
+
+``````
+
+## Part 4: Repetition
+You can specify the number of matches precisely using the following expressions:
+
+{n}: exactly n
+{n,}: n or more
+{,m}: at most m
+{n,m}: between n and m
+
+```{r }
+x <- "My favourite website is goooooogle.com"
+
+str_view(x, "o{2}")
+str_view(x, "o{2,}")
+str_view(x, "o{2,3}")
+``````
+
+## Task 4: Extract the phone-numbers from the follwing string and store it into a new vector by using the function `str_subset()`. The format is +X XXX XXX XXX/X.
+```{r}
+phones_raw <- c("+1 305 123 4567", "+1 305 123 4567", "text", "17861234567", "+1 786 123 4567", "7861234567", "786 - 123", "ndfnsdkfn", "4567", "+1 786 123 567")
+
+str_view_all(phones_raw, "\\+\\d{1}\\ \\d{3}\\ \\d{3}\\ \\d{3,4}")
+
+phones_clean <- str_subset(phones_raw, "\\+\\d{1}\\ \\d{3}\\ \\d{3}\\ \\d{3,4}")
+
+phones_clean 
+``````
+
+```{r}
+#you can also store a regex as an object using regex().
+
+regex1 <- regex("\\+\\d{1}\\ \\d{3}\\ \\d{3}\\ \\d{3,4}")
+
+str_view(phones_raw, regex1)
+
+``````
+
+## Part 5: Grouped matches
+We can use parentheses to extract parts of a complex match. For example,  we want to extract nouns from the sentences, so lets look for any word that comes after “a” or “the”. Defining a “word” in a regular expression is a little tricky, an approximation would be a sequence of at least one character that isn’t a space.
+
+```{r}
+noun <- "(a|the) ([^ ]+)"
+
+has_noun <- sentences %>%
+  str_subset(noun) %>%
+  head(10)
+has_noun %>% 
+  str_extract(noun)
+
+#str_extract() gives us the complete match
+
+has_noun %>% 
+  str_match(noun)
+
+#str_match() gives each individual component
+
+``````
+
+## Task 5: Find all words that come after a “number” like “one”, “two”, “three” etc. Pull out both the number and the word. 
+
+```{r}
+
+numword <- "\\b(one|two|three|four|five|six|seven|eight|nine|ten) +(\\w+)"
+
+sentences[str_detect(sentences, numword)] %>%
+  str_extract(numword)
+
+`````
+
+
+This tutorial is mainly based on Hadley Wickham's "Data Science with R"
+
+`
