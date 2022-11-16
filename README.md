@@ -45,6 +45,7 @@ Upon completion, participants will understand what a string is, its use in R wor
 - [stringr overview at stringr.tidyverse.org](https://stringr.tidyverse.org/)
 - [R for Data Science book - stringr](https://r4ds.had.co.nz/strings.html)
 - [Stringr "Cheat Sheet"](https://github.com/rstudio/cheatsheets/raw/main/strings.pdf) (PDF download)
+- [Stringr all functions] (https://cran.r-project.org/web/packages/stringr/stringr.pdf)
 
 
 ## License
