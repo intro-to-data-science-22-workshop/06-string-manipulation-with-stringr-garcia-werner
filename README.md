@@ -11,7 +11,17 @@ It t is part of the [I2DS Tools for Data Science workshop](https://github.com/in
 
 ### Session contents
 
-This session will introduce you to the modern data wrangling workflow with R and dplyr. Data wrangling is one of the core steps in the data science workflow. dplyr is a grammar of data manipulation, providing a consistent set of verbs that help you solve the most common data manipulation challenges, including the manipulation of datasets and variables. 
+This session is divided into two parts: the presentation, and the tutorial.
+
+# Presentation (PPT format)
+
+The presentation introduces the participant to string, its uses, and its prevalence in R workflow. Then, it introduces the "stringr" package, describing its functionalities across various categories.
+
+The presentation concludes with a brief overview of regular expressions, and its role in "stringr" commands. 
+
+# Tutorial (RMD format)
+
+The tutorial provides an opportunity for the participant to familiarize themselves with basic "stringr" functions, as well as regular expressions to supplement their use of "stringr" functionalities.
 
 ### Main learning objectives
 
