@@ -45,7 +45,6 @@ Upon completion, participants will understand what a string is, its use in R wor
 ## Further resources
 
 - [stringr overview at stringr.tidyverse.org](https://stringr.tidyverse.org/)
-- [Hands-on dplyr tutorial by Data School on YouTube](https://www.youtube.com/watch?v=jWjqLW-u3hc)
 - [R for Data Science book - stringr](https://r4ds.had.co.nz/strings.html)
 
 
