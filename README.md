@@ -1,17 +1,15 @@
-# Tutorial on R Package "stringr" by Richard Garcia-Guerrero &amp; Adrian Werner
-
-# Working with stringr
-
+# String Manipulation with Stringr
+Tutorial on R Package "stringr" by Richard Garcia-Guerrero &amp; Adrian Werner
 
 ## Summary
 
-This repository provides materials to learn how to manipulate strings in R using the "stringr" package. It includes a presentation in PowerPoint format providing an overview of "stringr", as well as an R Markdown (RMD) file containing basic exercises to practicing using "stringr" functions.
+This repository provides materials to learn how to manipulate strings in R using the "stringr" package. It includes a presentation in PowerPoint format providing an overview of "stringr", as well as an R Markdown (RMD) file containing basic exercises to practice using "stringr" functions.
 
 It is part of the [I2DS Tools for Data Science workshop](https://github.com/intro-to-data-science-22-workshop) run at the [Hertie School, Berlin](https://www.hertie-school.org/en/) in November 2022. The student-run workshop is part of the course [Introduction to Data Science](https://github.com/intro-to-data-science-22) taught by Simon Munzert at the Hertie School, Berlin, in Fall 2022.
 
 ### Session contents
 
-This session is divided into two parts: the presentation, and the tutorial.
+This session is divided into two parts: the presentation and the tutorial.
 
 #### Presentation (PPT format)
 
@@ -27,19 +25,19 @@ The tutorial provides an opportunity for the participant to familiarize themselv
 
 Upon completion, participants will understand what a string is, its use in R workflow, and how to use the "stringr" package to:
 
-(1) Detect matches,
-(2) Mutate strings,
-(3) Subset strings,
-(4) Join and split strings,
-(5) Manage the length of strings,
-(6) Sort and order strengths,
-(7) and more.
+- Detect matches,
+- Mutate strings,
+- Subset strings,
+- Join and split strings,
+- Manage the length of strings,
+- Sort and order strengths,
+- and more.
 
 
 ## Instructors
 
-- Adrian Werner ([linkedin](https://www.linkedin.com/in/adrian-wernerde/))
-- Richard Garcia-Guerrero ([linkedin](https://www.linkedin.com/in/richardagarcia/))
+- Adrian Werner ([LinkedIn](https://www.linkedin.com/in/adrian-wernerde/))
+- Richard Garcia-Guerrero ([LinkedIn](https://www.linkedin.com/in/richardagarcia/))
 
 
 ## Further resources
