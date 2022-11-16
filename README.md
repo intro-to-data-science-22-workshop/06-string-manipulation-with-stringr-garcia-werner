@@ -25,12 +25,12 @@ The tutorial provides an opportunity for the participant to familiarize themselv
 
 Upon completion, participants will understand what a string is, its use in R workflow, and how to use the "stringr" package to:
 
-- Detect matches,
-- Mutate strings,
-- Subset strings,
-- Join and split strings,
-- Manage the length of strings,
-- Sort and order strengths,
+- detect matches,
+- mutate strings,
+- subset strings,
+- join and split strings,
+- manage the length of strings,
+- sort and order strengths,
 - and more.
 
 
@@ -44,7 +44,7 @@ Upon completion, participants will understand what a string is, its use in R wor
 
 - [stringr overview at stringr.tidyverse.org](https://stringr.tidyverse.org/)
 - [R for Data Science book - stringr](https://r4ds.had.co.nz/strings.html)
-- [Stringr "Cheat Sheet"](https://github.com/rstudio/cheatsheets/raw/main/strings.pdf) (PDF Download)
+- [Stringr "Cheat Sheet"](https://github.com/rstudio/cheatsheets/raw/main/strings.pdf) (PDF download)
 
 
 ## License
