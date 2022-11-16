@@ -25,7 +25,15 @@ The tutorial provides an opportunity for the participant to familiarize themselv
 
 ### Main learning objectives
 
-The goals of this session are to (1) equip you with conceptual knowledge about the dplyr package and data wrangling workflow, (2) show you the three key verbs of the pacakge, and (3) provide you with practice material as well as some further readings.
+Upon completion, participants will understand what a string is, its use in R workflow, and how to use the "stringr" package to:
+
+(1) Detect matches,
+(2) Mutate strings,
+(3) Subset strings,
+(4) Join and split strings,
+(5) Manage the length of strings,
+(6) Sort and order strengths,
+(7) and more.
 
 
 ## Instructors
