@@ -1,6 +1,6 @@
 # Tutorial on R Package "stringr" by Richard Garcia-Guerrero &amp; Adrian Werner
 
-# Working with dplyr
+# Working with stringr
 
 
 ## Summary
@@ -26,7 +26,7 @@ The goals of this session are to (1) equip you with conceptual knowledge about t
 
 ## Further resources
 
-- [dplyr overview at dplyr.tidyverse.org](https://dplyr.tidyverse.org/)
+- [stringr overview at stringr.tidyverse.org](https://stringr.tidyverse.org/)
 - [Hands-on dplyr tutorial by Data School on YouTube](https://www.youtube.com/watch?v=jWjqLW-u3hc)
 - [R for Data Science book - part on data wrangling](https://r4ds.had.co.nz/wrangle-intro.html)
 
