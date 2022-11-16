@@ -155,12 +155,7 @@ sum(str_count(df$word, "^y"))
 
 ```{r Use str_count() to get regular expression matches}
 
-df %>%
-  mutate(
-    vowels = str_count(word, "[aeiou]"),
-    consonants = str_count(word, "[^aeiou]"),
-    a_or_c = str_count(word, "[a|c]")
-  )
+
 
 ``````
 
